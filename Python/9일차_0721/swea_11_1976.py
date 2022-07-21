@@ -8,13 +8,14 @@
 # 출력: 출력의 각 줄은 '#t'로 시작하고 공백을 한 칸 둔 다음, 시를 출력하고 공백을 한 칸 둔 다음 분을 출력한다.
 # (t는 테스트 케이스의 번호를 의미하며 1부터 시작한다.)
 
-t = int(input())
-for test_case in range(1, t+1):
+T = int(input())
+for tc in range(1, T+1):
   h1, m1, h2, m2 = map(int, input().split())
-
-  m = m1 + m2
-  h = h1 + h2 + m//60
-  m = m%60
-  if h > 12:
-    h = h - 12
-  print("# {} {} {}".format(test_case, h, m))
+  h3 = h1 + h2
+  m3 = m1 + m2
+  if m3 >= 60:
+      h3 += 1
+      m3 -= 60
+  if h3 > 12:
+      h3 -= 12
+  print('#{} {} {}'.format(tc, h3, m3))
