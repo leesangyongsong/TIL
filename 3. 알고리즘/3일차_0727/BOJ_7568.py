@@ -12,8 +12,7 @@ num_student = int(input()) # 참여인원수 입력
 student_list = [] # 빈 리스트 생성
 
 for i in range(num_student): # 참여인원들의 몸무게, 키 입력
-    weight, height = map(int, input().split())
-    student_list.append((weight, height))
+    weight, height = list(map(int, input().split()))
 
 for j in student_list:
     rank = 1
