@@ -6,7 +6,7 @@ guard = [input() for _ in range(n)]
 row, col = 0, 0
 
 for i in range(n):
-  if 'X' not in guard[i] :
+  if 'X' not in guard[i]:
     row += 1
         
 for j in range(m):
