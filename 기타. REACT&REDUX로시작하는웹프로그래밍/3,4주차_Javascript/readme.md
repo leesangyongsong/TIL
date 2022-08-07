@@ -425,3 +425,27 @@ A21.
     console.log('포함됨!');
   }
 ```
+
+## 📌 Node.js의 특징
+```python
+# Node.js
+  Node.js는 Chrome V8 JavaScript 엔진으로 빌드된 
+  JavaScript 런타임(프로그래밍 언어가 동작하는 환경!)
+
+  - JS는 웹브라우저 및 컴퓨터에서 작용 가능하다.
+    단, 웹브라우저에서는 HTML, CSS, JS만 사용 가능하여 
+    개발에 제한이 생기고 비효율적이다.
+
+    => 이를 Node.js를 통해 컴퓨터를 제어해 개발을 효율적으로 운영한다!
+
+# NPM(생태계라고도 함)
+  NPM(Node Package Manager)은 
+  전 세계의 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리
+
+  Trade-off 발생!
+  - 학습 난이도 증가
+  - 구성 복잡
+  vs
+  + 관리 효율 증가
+  + 손쉬운 기능 고도화 
+```
