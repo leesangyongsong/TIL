@@ -105,9 +105,16 @@
 
 # SQL Keywords - Date Manipulation Language
 - INSERT: 새로운 데이터 삽입(추가)
+  ex) INSERT INTO '테이블이름 (컬럼1, 컬럼2, ...)' VALUES (값1, 값2);
+
 - SELECT: 저장되어 있는 데이터 조회
+  ex) SELECT * FROM 테이블이름 WHERE 조건;
+
 - UPDATE: 저장되어 있는 데이터 갱신
+  ex) UPDATE 테이블이름 SET 컬럼1=값1, 컬럼2=값2 WHERE 조건;
+  
 - DELETE: 저장되어 있는 데이터 삭제
+  ex) DELETE FROM 테이블이름 WHERE 조건;
 
 # 테이블 생성 및 삭제
 1. 데이터베이스 생성하기
