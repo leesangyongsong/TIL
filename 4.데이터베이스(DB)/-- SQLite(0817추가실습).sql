@@ -22,6 +22,10 @@ SELECT COUNT(*) FROM healthcare where height >= 160 and height < 170;
 
 5. 음주(is_drinking)를 하는 사람(1)의 허리 둘레(waist)를 높은 순으로 5명 출력하시오. 
 SELECT waist FROM healthcare WHERE is_drinking=1 ORDER BY waist DESC LIMIT 5;
+SELECT id, waist FROM healthcare
+WERE is_drinking=1 AND waist <> ''
+ORDER BY waist DESC
+LIMIT 5;
 
 6. 시력 양쪽(va_left, va_right)이 1.5이상이면서 음주(is_drinking)를 하는 사람의 수를 출력하시오.
 SELECT COUNT(*) FROM healthcare WHERE (va_left>=1.5 and va_right>=1.5) and is_drinking=1;
@@ -40,6 +44,15 @@ SELECT AVG(weight) FROM healthcare WHERE gender=1;
 SELECT id, height, weight FROM healthcare ORDER BY height DESC LIMIT 1 OFFSET 1;
 
 11. BMI가 30이상인 사람의 수를 출력하시오. 
+SELECT COUNT(*) FROM healthcare WHERE weight/((height*0.01)*(height*0.01))>=30;
 
 12. 흡연(smoking)이 3인 사람의 BMI지수가 제일 높은 사람 순서대로 5명의 id와 BMI를 출력하시오.
-
+SELECT 
+  id,
+  weight 몸무게,
+  height 키,
+  weight/((height*0.01)*(height*0.01)) AS BMI
+FROM healthcare
+WHERE smoking = 3
+ORDER BY BMI DESC
+LIMIT 5;
