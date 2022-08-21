@@ -1,10 +1,9 @@
 -- SQLite
--- SQLite
 1. 모든 테이블의 이름을 출력하세요.
 .tables
 
 2. 모든 테이블의 데이터를 확인해보세요.
-.schema album
+.schema albums
 .schema employees
 .schema invoices
 .schema playlists
@@ -17,27 +16,58 @@
 .schema playlist_track
 
 3. 앨범(albums) 테이블의 데이터를 출력하세요.
-SELECT * FROM album;
+SELECT * FROM albums ORDER BY Title DESC LIMIT 5;
 
 4. 고객(customers) 테이블의 행 개수를 출력하세요.
-SELECT COUNT(*) FROM album;
+SELECT COUNT(*) FROM customers;
+
 
 5. 고객(customers) 테이블에서 고객이 사는 나라가 `USA`인 고객의 `FirstName`, `LastName`을 출력하세요.
-
+SELECT * FROM customers;
+SELECT 
+  FirstName, 
+  LastName 
+FROM customers 
+WHERE Country = 'USA'
+ORDER BY FirstName 
+DESC LIMIT 5;
 
 6. 송장(invoices) 테이블에서 `BillingPostalCode`가 `NULL` 이 아닌 행의 개수를 출력하세요.
-
+SELECT * FROM invoices;
+SELECT COUNT(*)
+FROM invoices
+WHERE BillingPostalCode IS NOT NULL;
 
 7. 송장(invoices) 테이블에서 `BillingState`가 `NULL` 인 데이터를 출력하세요.
-
+SELECT BillingState
+FROM invoices
+WHERE BillingState IS NULL
+ORDER BY InvoiceDate
+DESC LIMIT 5;
 
 8. 송장(invoices) 테이블에서 `InvoiceDate`의 년도가 `2013`인 행의 개수를 출력하세요.
-
+SELECT COUNT(*)
+FROM invoices
+WHERE InvoiceDate Like '%2013%';
 
 9. 고객(customers) 테이블에서 `FirstName`이 `L` 로 시작하는 고객의 `CustomerId`, `FirstName`, `LastName`을 출력하세요.
-
+SELECT
+  CustomerId,
+  FirstName,
+  LastName
+FROM customers
+WHERE FirstName LIKE 'L%'
+ORDER BY CustomerId
+ASC;
 
 10. 고객(customers) 테이블에서 각 나라의 고객 수와 해당 나라 이름을 출력하세요.
+SELECT * FROM customers;
+SELECT
+  고객수,
+  나라
+FROM customers
+ORDER BY 고객수
+DESC LIMIT 5;
 
 
 11. 앨범(albums) 테이블에서 가장 많은 앨범이 있는 Artist의 `ArtistId`와 `앨범 수`를 출력하세요.
