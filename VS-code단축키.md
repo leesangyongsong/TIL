@@ -4,8 +4,8 @@
 | 커멘드 | 효과 |
 | ---- | --- |
 | ! + control + space | html 문서구조 자동완성|
-| ctrl + PageUp/PageDown | 이전/다음 편집기 열기 |
 | alt + ctrl + L | beautify(확장 익스텐션 설치 후 별도 설정)|
+| ctrl + PageUp/PageDown | 이전/다음 편집기 열기 |
 | ctrl + \ | 화면분할 |
 | ctrl + B | 왼쪽사이드바 열기/닫기 |
 | ctrl + P | 파일 빠른 열기 |
@@ -16,6 +16,7 @@
 | alt + Up/Down | 줄 위아래로 이동 |
 | alt + shift + Up/Down | 커서 위/아래에 줄 복사 |
 | ctrl + Z | 되돌리기 |
+| ctrl + alt + Up/Down | 멀티커서 |
 | tap | 들여쓰기 |
 | shift + tap | 내어쓰기 |
 
