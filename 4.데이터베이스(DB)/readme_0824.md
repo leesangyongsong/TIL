@@ -68,10 +68,12 @@ Genre.objects.all()
    2) 일부 데이터 조회(get)
       Genre.objects.get(id=1)
       -- <Genre: Genre object (1)>
+      -- 반드시 하나. 없거나, 많으면 오류 띄움.
 
    3) 일부 데이터 조회(filter)
       Genre.objects.filter(id=1)
       -- <QuerySet [<Genre: Genre object (1)>]>
+      -- 무조건 결과가 QuerySet(일종의 리스트)
 
 3. Update
    1) genre 객체 활용
