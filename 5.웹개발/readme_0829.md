@@ -181,4 +181,5 @@ https://blogs.windows.com/msedgedev/2016/04/11/css-usage-platform-data/
 // 정리
 HTML: 문서의 구조, 태그
 CSS : 무언가(태그, class, id)를 선택해서 스타일링
+
 ```
