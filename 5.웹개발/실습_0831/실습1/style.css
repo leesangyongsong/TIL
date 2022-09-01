@@ -1,0 +1,73 @@
+/* 아래에 CSS를 작성해주세요. */
+/* * {
+  border: 1px solid black;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header .page_title {
+  text-align: center;
+}
+
+.font_size_12px {
+  font-size: 12px;
+}
+
+section {
+  width: 900px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: start;
+}
+
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .card:nth-child(2) {
+  margin: 0 5px;
+}
+
+.card .product_img {
+  border-radius: 5%;
+  width: 100%;
+  height: 300px;
+}
+
+.card .product1 {
+  background: url('./images/1.webp') no-repeat center center;
+  background-size: cover;
+}
+
+.card .product2 {
+  background: url('./images/2.webp') no-repeat center center;
+  background-size: cover;
+}
+
+.card .info, 
+.card .title, 
+.card .desc {
+  font-size: 4px;
+  color: gray;
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+.card .title {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  margin-top: 7px;
+}
+
+.card .desc {
+  letter-spacing: -1px;
+  line-height: 15px;
+}
+
