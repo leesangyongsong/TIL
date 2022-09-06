@@ -1,0 +1,14 @@
+/* 실습1 */
+.homework {
+  width: 1200px;
+}
+
+.homework .title {
+  text-align: center;
+}
+
+/* 실습2 */
+li {
+  list-style: none;
+  cursor: pointer;
+}
