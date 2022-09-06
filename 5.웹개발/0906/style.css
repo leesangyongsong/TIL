@@ -12,3 +12,12 @@ li {
   list-style: none;
   cursor: pointer;
 }
+
+.slide {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.carousel-inner > .carousel-item > img {
+  height: 520px;
+}

@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="d-flex justify-content-between p-2 text-bg-primary">
+  <!-- navbar -->
+  <nav class="sticky-top d-flex justify-content-between p-2 text-bg-primary">
     <div class="logo">Navbar</div>
     <ul class="nav-items d-flex my-0">
       <li class="nav-item mx-2 my-0 p-0">Home</li>
@@ -18,6 +19,49 @@
       <li class="nav-item mx-2 my-0 p-0">광고</li>
     </ul>
   </nav>
+
+  <!-- carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/1.jpg" class="d-block w-100" alt="이미지1">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/2.jpg" class="d-block w-100" alt="이미지2">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/3.jpg" class="d-block w-100" alt="이미지3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- container -->
+  <div class="container mt-5">
+    <!-- Content here -->
+    <h2 class="text-center fw-bold">Lorem ipsum</h2>
+    <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odit unde similique ut numquam obcaecati laudantium quidem recusandae itaque iste in minus, omnis voluptas nam dolore possimus amet dignissimos tenetur!
+    Molestiae, eum repellat! Alias quia minima sint illum saepe animi. Minus veniam sint atque, earum reiciendis iure cupiditate? Atque nam dolorum fugit fugiat officia laborum libero eum maiores ipsum saepe?
+    Numquam suscipit aut asperiores provident dicta, quas a ipsa quisquam magni consequuntur omnis alias debitis exercitationem eaque eos fugiat illum incidunt obcaecati ab ex! Accusamus et eaque doloremque obcaecati nisi.
+    Minus ratione unde deserunt porro quis repellendus, cumque quas natus! Quos ullam alias quas saepe deserunt tempore doloribus fuga molestias quisquam suscipit animi repudiandae vitae quasi beatae, ratione rerum odit.
+    Officia expedita autem magnam debitis beatae corporis dicta officiis vitae amet doloremque eaque impedit aliquam, sed sequi dolorum, incidunt ullam repellendus dolor. Eos aliquam perferendis temporibus rem sint, sapiente sequi!
+    Consequatur aperiam cupiditate distinctio quia possimus minima veritatis officiis eveniet dicta tenetur! Dolore tenetur numquam omnis libero possimus accusamus corrupti odit ad vel consectetur expedita quidem qui vitae, illo saepe.
+    Odio quam in, vel ad ipsum, unde maiores harum est quos tenetur libero odit voluptates labore voluptate! Magnam, quos, harum vitae accusamus totam facere pariatur aut sapiente non voluptate sed.</p>
+  </div>
+
+  
   
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
