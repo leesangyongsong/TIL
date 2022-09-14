@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./favicon.png" />
+  <style>
+    body {
+      font-family: 'Nanum Gothic', sans-serif;
+    }
+
+    .anchor {
+      display: block;
+      height: 100px;       /* 헤더의 height와 동일한 값 */
+      margin-top: -100px;  /* 헤더의 height와 동일한 값 */
+      visibility: hidden;
+    }
+
+    .letter-spacing {
+      letter-spacing: -2px;
+    }
+
+    .movie {
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      border-radius: 0;
+      top: 50%;
+      bottom: 50%;
+      left: 50%;
+      right: 50%;
+      height: 100%;
+      width: 100%;
+      opacity: 0%;
+      transition: .5s ease;
+      background-color: rgba(0, 0, 0, 0.5);
+      transform: translate(-50%, -50%);
+    }
+
+    .overlay-text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      border: 1px solid white;
+      padding: 15px 10px;
+    }
+
+    .movie:hover .overlay {
+      opacity: 1;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 40px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .small-card {
+      display: none;
+    }
+
+    @media (max-width: 992px) {
+      .card {
+        display: block;
+      }
+
+      .table,
+      .small-list-group {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container" id="navbar">
+      <a class="navbar-brand" href="index.html"><img src="./images/logo.png" style="width: 100px;" alt="img"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">영화소개</a>
+          <a class="nav-link" href="#actors">출연진</a>
+          <a class="nav-link" href="#semi-movie">트레일러 영상</a>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-dark nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="anchor"></div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- container1 - 영화소개 -->
+  <div class="container my-5">
+    <h2 class="fw-bold my-5">영화 소개</h2>
+    <div class="card m-3">
+      <div class="row g-0">
+        <div class="col-lg-4 text-center">
+          <img src="./images/movie1detail.jpg" class="img-fluid rounded-start h-100 w-100" alt="...">
+        </div>
+        <div class="col-lg-8 align-self-center">
+          <div class="card-body p-4">
+            <h3 class="card-title fw-bold">쇼생크 탈출 <span class="text-secondary">1994</span></h3>
+            <p class="card-text"> <span class="badge bg-dark">15</span> 1995/01/28(KR) <span>ㆍ 드라마, 범죄</span> <span>ㆍ 2h 22m</span> </p>
+            <p class="card-text"><small class="text-muted" style="font-style: italic;">두려움은 너를 죄수로 가두고 희망은 너를 자유롭게 하리라</small></p>
+            <p class="card-text py-3"> <span class="h4">개요</span><br> 촉망받는 은행 간부 앤디 듀프레인은 아내와 그녀의 정부를 살해했다는 누명을 쓴다. 주변의 증언과 살해 현장의 그럴듯한 증거들로 그는 종신형을 선고받고 악질범들만 수용한다는 지옥같은 교도소 쇼생크로 향한다. 인간 말종 쓰레기들만 모인 그곳에서 그는 이루 말할 수 없는 억압과 짐승보다 못한 취급을 당한다. 그러던 어느 날, 간수의 세금을 면제받게 해 준 덕분에 그는 일약 교도소의 비공식 회계사로 일하게 된다. 그 와중에 교도소 소장은 죄수들을 이리저리 부리면서 검은 돈을 긁어 모으고 앤디는 이 돈을 세탁하여 불려주면서 그의 돈을 관리하는데... </p>
+            <div class="d-flex">
+              <p><span class="fw-bold">Frank Darabont</span> <br>Director, Screenplay</p>
+              <p class="mx-4"><span class="fw-bold">Stephen King</span> <br>Novel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- container2 - 출연진 -->
+  <div class="anchor" id="actors"></div>
+  <div class="container">
+    <h2 class="fw-bold my-5">주요 출연진</h2>
+    <div class="row">
+
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <div class="card h-100">
+          <img src="./images/actor1.jpg" class="card-img-top" alt="...">
+          <div class="card-body letter-spacing">
+            <h5 class="card-title">Tim Robbins</h5>
+            <p class="card-text">Andy Dufresne</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <div class="card h-100">
+          <img src="./images/actor2.jpg" class="card-img-top" alt="...">
+          <div class="card-body letter-spacing">
+            <h5 class="card-title">Morgan Freeman</h5>
+            <p class="card-text">Ellis Boyd 'Red' Redding</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <div class="card h-100">
+          <img src="./images/actor3.jpg" class="card-img-top" alt="...">
+          <div class="card-body letter-spacing">
+            <h5 class="card-title">Bob Gunton</h5>
+            <p class="card-text">Warden Norton</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <div class="card h-100">
+          <img src="./images/actor4.jpg" class="card-img-top" alt="...">
+          <div class="card-body letter-spacing">
+            <h5 class="card-title">William Sadler</h5>
+            <p class="card-text">Heywood</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <div class="card h-100">
+          <img src="./images/actor5.jpg" class="card-img-top" alt="...">
+          <div class="card-body letter-spacing">
+            <h5 class="card-title">Clancy Brown</h5>
+            <p class="card-text">Captain Byron T. Hadley</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <div class="card h-100">
+          <img src="./images/actor6.jpg" class="card-img-top" alt="...">
+          <div class="card-body letter-spacing">
+            <h5 class="card-title">Gil Bellows</h5>
+            <p class="card-text">Tommy</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- container3 - 트레일러 영상 -->
+  <div class="anchor" id="semi-movie"></div>
+  <div class="container py-5 mb-5">
+    <h2 class="fw-bold my-5">트레일러 영상</h2>
+    <div class="row">
+      <div class="col-sm-12 col-lg-6 text-center">
+        <iframe width="480" height="300" src="https://www.youtube.com/embed/dQt_TQoiAl0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-12 col-lg-6 text-center">
+        <iframe width="480" height="300" src="https://www.youtube.com/embed/VPzxrCZS6OY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  
+  <!-- footer -->
+  <div class="footer">
+    <p> 주세환 & 이상용 @ Form. 1314 </p>
+  </div>
+  
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
