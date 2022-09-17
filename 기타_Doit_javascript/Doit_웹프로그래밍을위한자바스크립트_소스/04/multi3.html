@@ -9,5 +9,21 @@
 </head>
 <body>
 	<div id="result"></div>
+
+	<script>
+		var userNumber = prompt("숫자를 입력하세요.");
+		var displayArea = document.querySelector('#result');
+		
+		if(userNumber != null) {
+			if(userNumber % 3 === 0) {
+				// 3의 배수일 떄 실행할 명령
+				displayArea.innerHTML = userNumber + "은 3의 배수입니다.";
+			}
+			else {
+				// 3의 배수가 아닐 때 실행할 명령
+				displayArea.innerHTML = userNumber + "은 3의 배수가 아닙니다.";
+			}
+		}
+	</script>
 </body>
 </html>

@@ -9,5 +9,31 @@
 </head>
 <body>
 
+	<script>
+		// 팩토리얼 계산 프로그램 만들기
+		var n = prompt("숫자를 입력하세요.", "10"); // 몇까지 곱할 것인지를 프롬프트 창으로 입력받아 변수에 저장
+		var nFact = 1; // 팩토리얼 계산 결괏값을 저장할 변수, 1을 기본값으로 지정
+		var i = 2; // 반복문에 사용할 카운터 변수, 1!= 1이기 때문에 i = 2부터 시작
+
+		while(i <= n) { // i = n 까지 반복
+			nFact *= i;		// nFact = nFact * i
+			i++;
+		}
+		document.write(n + "!=" + nFact);
+
+		// while문
+		var i = 0
+		while (i < 10) { // 조건 검사
+			document.write('반복 조건이 true이면 반복합니다.<br>'); 
+			i += 1; // 중괄호 안의 자바스크립트 소스 실행
+		}
+
+		// do while문
+		var i = 0
+		do {
+			document.write('반복 조건이 true이면 반복합니다.<br>'); // 명령 실행
+			i += 1;
+		} while(i < 10) // 조건이 false가 되면 반복 종료
+	</script>
 </body>
 </html>
