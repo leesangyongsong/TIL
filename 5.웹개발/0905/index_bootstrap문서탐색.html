@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Bootstrap Breakpoint -->
+    <caption>1. Bootstrap Breakpoint</caption>
+    <table>
+      <thead>
+        <tr>
+          <th>Breakpoint</th>
+          <th>Class infix</th>
+          <th>Dimensions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Extra small</td>
+          <td>None</td>
+          <td>576px 미만</td>
+        </tr>
+
+        <tr>
+          <td>Small</td>
+          <td>sm</td>
+          <td>576px 이상</td>
+        </tr>
+
+        <tr>
+          <td>Medium</td>
+          <td>md</td>
+          <td>768px 이상</td>
+        </tr>
+
+        <tr>
+          <td>Large</td>
+          <td>lg</td>
+          <td>992px 이상</td>
+        </tr>
+
+        <tr>
+          <td>Extra large</td>
+          <td>xl</td>
+          <td>1200px 이상</td>
+        </tr>
+
+        <tr>
+          <td>Extra extra large</td>
+          <td>xxl</td>
+          <td>1400px 이상</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Bootstrap table sample -->
+    <table class="my-3">
+      <caption>
+        This is an example table, and this is its caption to describe the contents.
+      </caption>
+      <thead>
+        <tr>
+          <th>Table heading</th>
+          <th>Table heading</th>
+          <th>Table heading</th>
+          <th>Table heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+        <tr>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+        <tr>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Headings -->
+    <p class="h2">Bootstrap Headings</p>
+    <p class="h1">h1. Bootstrap heading</p>
+    <p class="h2">h2. Bootstrap heading</p>
+    <p class="h3">h3. Bootstrap heading</p>
+    <p class="h4">h4. Bootstrap heading</p>
+    <p class="h5">h5. Bootstrap heading</p>
+    <p class="h6">h6. Bootstrap heading</p>
+
+    <!-- Bootstrap Horizontal rules -->
+    <p class="h2">Bootstrap Horizontal rules</p>
+    <hr>
+    <div class="text-success"><hr></div>
+    <hr class="border border-danger border-2 opacity-50">
+    <hr class="border border-primary border-3 opacity-75">
+    
+    <!-- Inline text elements -->
+    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+    <p><del>This line of text is meant to be treated as deleted text.</del></p>
+    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+    <p><u>This line of text will render as underlined.</u></p>
+    <p><small>This line of text is meant to be treated as fine print.</small></p>
+    <p><strong>This line rendered as bold text.</strong></p>
+    <p><em>This line rendered as italicized text.</em></p>
+
+    <!-- list -->
+    <!-- unstyled --> 
+    <ul class="list-unstyled">
+      <li>This is a list.</li>
+      <li>It appears completely unstyled.</li>
+      <li>Structurally, it's still a list.</li>
+      <li>However, this style only applies to immediate child elements.</li>
+      <li>Nested lists:
+        <ul>
+          <li>are unaffected by this style</li>
+          <li>will still show a bullet</li>
+          <li>and have appropriate left margin</li>
+        </ul>
+      </li>
+      <li>This may still come in handy in some situations.</li>
+    </ul>
+
+    <!-- inline -->
+    <ul class="list-inline">
+      <li class="list-inline-item">This is a list item.</li>
+      <li class="list-inline-item">And another one.</li>
+      <li class="list-inline-item">But they're displayed inline.</li>
+    </ul>
+
+    <!-- Description list alignment -->
+    <dl class="row">
+      <dt class="col-sm-3">Description lists</dt>
+      <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+    
+      <dt class="col-sm-3">Term</dt>
+      <dd class="col-sm-9">
+        <p>Definition for the term.</p>
+        <p>And some more placeholder definition text.</p>
+      </dd>
+    
+      <dt class="col-sm-3">Another term</dt>
+      <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+    
+      <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+      <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+    
+      <dt class="col-sm-3">Nesting</dt>
+      <dd class="col-sm-9">
+        <dl class="row">
+          <dt class="col-sm-4">Nested definition list</dt>
+          <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+        </dl>
+      </dd>
+    </dl>
+
+    <!-- Overview -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
