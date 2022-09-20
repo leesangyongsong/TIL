@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>프로젝트</title>
   <style>
+    body {
+      text-align: center;
+    }
     .ball {
       width: 10rem;
       height: 10rem;
@@ -19,8 +22,9 @@
       font-size: xx-large;
       font-weight: bold;
     }
-    .ball-container {
+    #result {
       display: flex;
+      justify-content: center;
     }
   </style>
 </head>
@@ -28,6 +32,7 @@
   <h1>로또 추천 번호</h1>
   <button id="lotto-btn">행운 번호 받기</button>
   <div id="result"></div>
+
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <script>
     const button = document.querySelector('#lotto-btn')
@@ -37,11 +42,20 @@
       ballContainer.classList.add('ball-container')
       // 공을 만들어서 =>  6개를 만들어서
       const numbers = _.sampleSize(_.range(1, 46), 6)
-      console.log(numbers)
       const ball = document.createElement('div')
       ball.classList.add('ball')
       ball.innerText = numbers[0]
-      ball.style.backgroundColor = 'blue'
+      if (numbers[0] <= 10) {
+        ball.style.backgroundColor = 'yellow'
+      } else if (numbers[0] <= 20 && numbers[0] > 10) {
+        ball.style.backgroundColor = 'skyblue'
+      } else if (numbers[0] <= 30 && numbers[0] > 20) {
+        ball.style.backgroundColor = 'red'
+      } else if (numbers[0] <= 40 && numbers[0] > 30) {
+        ball.style.backgroundColor = 'gray'
+      } else {
+        ball.style.backgroundColor = 'green'
+      }
       // 컨테이너에 붙인다.
       ballContainer.appendChild(ball)
       // 컨테이너를 결과 영역에 붙인다. 
