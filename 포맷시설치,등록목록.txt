@@ -1,0 +1,34 @@
+1. 어플설치
+- 크롬(2번으로 연결)
+- ezPDF
+- 한글
+- 마이크로소프트(엑셀, PPT, WORD)
+- 알집
+- 디스코드
+- ZOOM
+- 샤나인코더
+- VS 코드(3번으로 연결)
+- 카카오톡
+
+2. 크롬 즐겨찾기 등록
+https://www.youtube.com/
+https://syllaverse.com/courses/3
+https://www.notion.so/KDT1-0605edc1e7844ec4913b51cb6bae2b52
+https://lc.multicampus.com/k-digital/#/feed
+https://taling.me/vod/list
+https://github.com/
+https://codepen.io/pen/
+https://us06web.zoom.us/j/85231102564?pwd=TmtmZlJJcEEzMVpsV1FKbS9MQXBXUT09#success
+
+3. 기타 해야할 일
+- git bash 설치 후 github연결
+- vs코드 확장프로그램
+Auto Close Tag
+Auto rename tag
+beautify
+html css support
+intellisense for css class names in HTML
+korean language pack for visual studio code
+open in browser
+python
+sqlite
